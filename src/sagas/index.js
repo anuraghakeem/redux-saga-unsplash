@@ -1,12 +1,15 @@
 import { takeEvery, put } from 'redux-saga/effects'
 
-function* workerSaga() {
-    console.log("Hey from Worker")
-    yield put({ type: 'ACTION_FROM_WORKER' })
+import { IMAGES } from '../constants'
+
+//worker saga
+function* handleImagesLoad() {
+    console.log("Fetching Images from unsplash")
 }
 
+//watcher saga
 function* rootSaga() {
-    yield takeEvery('HELLO', workerSaga)
+    yield takeEvery(IMAGES.LOAD, handleImagesLoad)
 }
 
 export default rootSaga;
