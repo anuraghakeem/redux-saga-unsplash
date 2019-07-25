@@ -4,7 +4,7 @@ import { IMAGES } from '../constants'
 import { loadImageStats, setImageStats, setImageStatsError } from '../actions';
 import { fetchImageStats } from '../api';
 
-function* handleStatsRequest(id) {
+export function* handleStatsRequest(id) {
     // loop wil check for block 3 times and throw a error otherwise
     for (let i = 0; i < 3; i++) {
         try {
