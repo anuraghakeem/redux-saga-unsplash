@@ -12,8 +12,9 @@ class App extends Component {
         return (
             <Provider store={store}>
                 <Fragment>
-                    <Header />
-                    <ImageGrid />
+                    <div data-test="AppComponent"><Header />
+                        <ImageGrid />
+                    </div>
                 </Fragment>
             </Provider>
         );
